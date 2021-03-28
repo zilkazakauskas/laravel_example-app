@@ -32,7 +32,8 @@
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
                         @endif
-                        
+                        <a href="{{ url('forgot-password') }}" class="ml-4 text-sm text-gray-700 underline">Forgot password</a>
+                        <a href="{{ url('users') }}" class="ml-4 text-sm text-gray-700 underline">Users</a>
                     @endauth
                 </div>
             @endif

@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\MaterialController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,6 +43,8 @@ Route::get('/requests', function(){
     return view('requests');
 });
 
+Route::get('/users', [UserController::class, 'index']);
+
 // Route::get('/reset-password', function(){
 //     return view('reset-password');
 // });
@@ -49,3 +52,10 @@ Route::get('/requests', function(){
 // Route::get('/forgot-password', function(){
 //     return view('forgot-password');
 // });
+
+// Route::get('/insertTest',[MaterialController::class, 'insertMaterial']);
+// Route::post('/tryToInsert',[MaterialController::class, 'insertMaterial']);
+
+// Route::get('/all_materials', [MaterialController::class, 'showMaterials']);
+
+Route::get('/insert_material', [MaterialController::class, 'selectTypeAndCategory']);
